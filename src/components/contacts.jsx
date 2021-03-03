@@ -18,7 +18,9 @@ const Contacts = () => {
             <div style={{ textAlign: 'center' }}>
                 <h3>Contacts</h3>
                 {
-                    contacts.map(contact => <p>{contact.account}</p>)
+                    contacts.length ?
+                        null :
+                        contacts.map(contact => <p>{contact.account}</p>)
                 }
             </div>
         </div>

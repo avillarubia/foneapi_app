@@ -58,12 +58,14 @@ const Message = () => {
             <h3>Chat Box</h3>
 
             {
-                messages.map(message =>
-                    <p>
-                        <span>{message.account_id} : </span>
-                        <span>{message.message}</span>
-                    </p>
-                )
+                messages.length ?
+                    <h1>You need to login to see messages</h1> :
+                    messages.map(message =>
+                        <p>
+                            <span>{message.account_id} : </span>
+                            <span>{message.message}</span>
+                        </p>
+                    )
             }
 
             <form id="form" action="">
